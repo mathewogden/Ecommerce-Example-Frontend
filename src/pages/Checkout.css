@@ -1,0 +1,13 @@
+.h1 {
+  color: rgbrgb(58, 57, 57);
+  font-size: 70px !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center !important;
+  padding: 5px !important;
+}
+
+.check {
+  margin: 3rem auto;
+  width: 60%;
+}

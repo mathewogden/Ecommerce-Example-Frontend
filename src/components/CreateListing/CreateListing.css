@@ -1,0 +1,8 @@
+#create-list .btn {
+  color: rgb(58, 57, 57);
+  border-color: #9494949f;
+}
+#create-list .btn:hover {
+  background-color: rgb(39, 130, 167) !important;
+  color: rgb(58, 57, 57);
+}

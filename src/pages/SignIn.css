@@ -1,0 +1,14 @@
+.h1 {
+  color: rgb(58, 57, 57);
+  font-size: 70px !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  padding: 5px !important;
+}
+
+.signin {
+  margin: 3rem auto;
+  height: 36.5rem;
+  width: 60%;
+}

@@ -1,0 +1,14 @@
+.h1 {
+  color: rgb(0, 0, 0);
+  font-size: 70px !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  padding: 5px !important;
+}
+
+.signup {
+  margin: 3rem auto;
+  height: 42rem;
+  width: 60%;
+}

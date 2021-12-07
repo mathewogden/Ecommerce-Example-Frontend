@@ -1,0 +1,47 @@
+.home-page {
+  margin-bottom: 11.7rem;
+}
+
+.home-page .home-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  font-size: 3.5rem !important;
+  background: rgb(58, 57, 57);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gallery-text {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+.button1 {
+  background-color: #afafaf;
+  border: none;
+  border-radius: 0.5em;
+  color: rgb(58, 57, 57);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: inline-block;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  font-size: 26px;
+  width: 250px;
+}
+
+.button2 {
+  background-color: #afafaf;
+  border: none;
+  border-radius: 0.5em;
+  color: rgb(58, 57, 57);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: inline-block;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  font-size: 26px;
+  width: 250px;
+}

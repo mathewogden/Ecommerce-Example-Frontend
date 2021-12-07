@@ -1,0 +1,46 @@
+#main-header {
+  background-color: rgb(233, 231, 231);
+  max-width: 100%;
+  margin: 0;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(41, 41, 41, 0.25);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(41, 41, 41, 0.25);
+  box-shadow: 0px 0px 5px 3px rgba(41, 41, 41, 0.25);
+}
+
+#main-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-header li {
+  margin: 0.5rem 5rem;
+}
+
+#main-header a {
+  text-decoration: underline;
+  font-size: 1.3rem;
+  color: rgb(58, 57, 57);
+}
+
+#main-header a:hover,
+#main-header a:active,
+#main-header a.active,
+.signout:hover {
+  color: rgb(58, 57, 57);
+}
+
+#header.header-down {
+  margin: 0.5rem 5rem;
+}
+
+.signout {
+  color: rgb(25, 147, 184);
+  cursor: pointer;
+  border: none;
+  font-size: 1.3rem;
+  text-decoration: underline;
+}

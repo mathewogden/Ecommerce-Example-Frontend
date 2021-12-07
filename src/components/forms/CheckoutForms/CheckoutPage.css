@@ -1,0 +1,49 @@
+h4 {
+  color: rgb(58, 57, 57);
+  font-size: 35px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  padding: 10px 1px;
+}
+
+.Input {
+  border: none;
+  border-radius: 0.3em;
+  color: rgb(58, 57, 57);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 26px;
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  height: 45px !important;
+  width: 445px !important;
+}
+
+.Input::placeholder {
+  color: rgba(0, 38, 252, 0.274);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 26px;
+  text-align: center !important;
+}
+
+.button {
+  background-color: rgb(39, 130, 167);
+  border: none;
+  border-radius: 0.5em;
+  color: rgb(233, 233, 233);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 25px !important;
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  font-size: 26px;
+  width: 300px;
+}
+
+.button:hover {
+  background-color: rgb(219, 185, 91);
+}

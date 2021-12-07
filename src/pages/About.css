@@ -1,0 +1,19 @@
+.anh1 {
+  color: rgb(58, 57, 57);
+  font-size: 50px !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.ap {
+  color: rgb(58, 57, 57);
+  font-size: 25px !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  text-align: justify !important;
+}
+
+.about {
+  margin: 3rem auto;
+  width: 60%;
+}

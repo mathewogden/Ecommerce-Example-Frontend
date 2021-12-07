@@ -1,0 +1,143 @@
+.title {
+  color: rgb(58, 57, 57);
+  font-size: 70px !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  padding: 5px !important;
+}
+
+.shopbag {
+  margin: 3rem auto;
+  width: 60%;
+}
+
+.emptybag {
+  color: rgb(58, 57, 57);
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  padding: 25px;
+}
+
+.subtotal {
+  color: rgb(58, 57, 57);
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  padding: 5px;
+}
+
+.card {
+  background-color: rgb(233, 231, 231);
+  border: none;
+  border-radius: 6px;
+  margin: 25px;
+  padding: 10px;
+}
+
+.item {
+  margin: 1rem 0;
+}
+
+.image {
+  width: 100%;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.count {
+  text-align: center;
+}
+
+.content h3 {
+  color: rgb(58, 57, 57);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 50px;
+  padding-bottom: 1px;
+}
+
+.content p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 23px;
+  color: rgb(58, 57, 57);
+  text-align: left !important;
+  padding: 1px 230px 1px 230px;
+}
+
+.actions {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.removeitem {
+  background-color: rgb(39, 130, 167);
+  border: none;
+  border-radius: 0.5em;
+  color: rgb(58, 57, 57);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: inline-block;
+  text-align: center;
+  font-size: 26px;
+  width: 300px;
+}
+
+.checkout {
+  background-color: rgb(39, 130, 167);
+  border: none;
+  border-radius: 0.5em;
+  color: rgb(233, 233, 233);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 26px;
+  width: 300px;
+}
+
+.shopping {
+  background-color: rgb(39, 130, 167);
+  border: none;
+  border-radius: 0.5em;
+  color: rgb(233, 233, 233);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 26px;
+  width: 300px;
+}
+
+.removeitem:hover {
+  color: rgb(233, 233, 233);
+  background-color: rgb(185, 156, 58);
+}
+
+.checkout:hover {
+  color: rgb(233, 233, 233);
+  background-color: rgb(185, 156, 58);
+}
+
+.shopping:hover {
+  color: rgb(233, 233, 233);
+  background-color: rgb(185, 156, 58);
+}
