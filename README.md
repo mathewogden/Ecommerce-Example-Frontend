@@ -6,7 +6,7 @@
 - [Technologies](#Technologies)
 - [Code](#Code)
 - [Author](#Author)
-- [Credits](#Credits)
+- [Additional Credits](#Credits)
 - [License](#License)
 
 ## Description
@@ -145,7 +145,7 @@ Mathew Ogden
 - [linkedIn](https://www.linkedin.com/in/mathew-ogden-b85688220/)
 - [Instagram](https://www.instagram.com/matogden_/?hl=en)
 
-## Credits
+## Additional Credits
 
 - Ben Von Achen & Alexa Hayes
 
