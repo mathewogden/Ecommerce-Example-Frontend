@@ -1,70 +1,154 @@
-# Getting Started with Create React App
+# Ecommerce Frontend Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Description](#Description)
+- [Technologies](#Technologies)
+- [Code](#Code)
+- [Author](#Author)
+- [Credits](#Credits)
+- [License](#License)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Here's the frontend to my ecommerce example platform!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Gif](https://media.giphy.com/media/8SghqtX3VC8Cj9YbxR/giphy.gif)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+<!-- left examples here put edit to put your technologies -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [JavaScript](https://www.w3schools.com/js/)
+- [ReactJs](https://reactjs.org/)
+- [Axios](https://axios-http.com/docs/intro)
+- [Material UI](https://mui.com)
+- [Bootstrap](https://getbootstrap.com)
+- [Reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
+- [MySQL](https://www.mysql.com)
 
-### `npm run build`
+## Code
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### The Dashboard
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- One feature of this application is that a user can not just purchase items, but also create listings of their own for others to purchase. A user can manage their listings in the user dashboard.
+  Here's what we're all importing:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { useRouteMatch, withRouter } from 'react-router';
+import { Link, Switch, Route } from 'react-router-dom';
+import { Container } from 'reactstrap';
 
-### `npm run eject`
+import CreateListing from '../../components/CreateListing';
+import ManageListings from '../../components/ManageListings';
+import UserOrders from '../../components/UserOrders';
+import './Dashboard.css';
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-All within the dashboards constant, we'll check if the user is logged in with a token that is being stored in local storage. If so, we'll use axios to retrieve that users information.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+  const [user, setUser] = useState([]);
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      props.history.push('/');
+    }
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    const options = {
+      headers: {
+        Authorization: `Bearer ${props.token}`,
+      },
+    };
+    const url = `http://localhost:3001/user/dashboard`;
+    axios.get(url, options).then(
+      (res) => {
+        let user = {
+          firstName: res.data.userInfo.firstName,
+          lastName: res.data.userInfo.lastName,
+          username: res.data.userInfo.username,
+        };
+        localStorage.setItem('user', JSON.stringify({ user }));
+        setUser(res.data.userInfo);
+      },
+      (err) => {
+        localStorage.removeItem('token');
+        props.history.push('/signin');
+        console.error(err);
+      }
+    );
+  }, [props.token, props.history]);
 
-## Learn More
+  const { path, url } = useRouteMatch();
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-Then, we display our dashboard with all the corresponding user information. This contains routes for our user to perform crud operations for their listings, and also view their past orders they've made.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+return (
+    <div>
+      <Container fluid className='main text-center'>
+        <h2 className='mt-5 font-weight-bold text-uppercase'>
+          {user.firstName}'s Dashboard
+        </h2>
+        <div className='nav pt-3 '>
+          <ul>
+            <li>
+              <Link className='link' to={`${url}`}>
+                Dashboard
+              </Link>
+            </li>
+            <li>
+              <Link className='link' to={`${url}/create-listing`}>
+                Create Listing
+              </Link>
+            </li>
+            <li>
+              <Link className='link' to={`${url}/manage-listings`}>
+                Manage Listings
+              </Link>
+            </li>
+            <li>
+              <Link className='link' to={`${url}/user-orders`}>
+                View Orders
+              </Link>
+            </li>
+          </ul>
+        </div>
 
-### Code Splitting
+        <div className='profile'>
+          <h3 style={{ fontSize: '50px' }}>Profile</h3>
+          <p>username: {user.username} </p>
+          <p>first name: {user.firstName}</p>
+          <p>last name: {user.lastName} </p>
+          <p>email address: {user.email}</p>
+        </div>
+      </Container>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+      <Switch>
+        <Route path={`${path}/create-listing`} component={CreateListing} />
+        <Route path={`${path}/manage-listings`} component={ManageListings} />
+        <Route path={`${path}/user-orders`} component={UserOrders} />
+      </Switch>
+    </div>
+  );
+```
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Mathew Ogden
 
-### Making a Progressive Web App
+- [GitHub](https://github.com/mathewogden)
+- [linkedIn](https://www.linkedin.com/in/mathew-ogden-b85688220/)
+- [Instagram](https://www.instagram.com/matogden_/?hl=en)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Credits
 
-### Advanced Configuration
+- Ben Von Achen & Alexa Hayes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License]
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://www.mit.edu/~amini/LICENSE.md)
